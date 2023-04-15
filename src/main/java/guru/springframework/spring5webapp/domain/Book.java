@@ -12,6 +12,17 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @ManyToOne
+    // one book can be published by many  publisher
+    private Publisher publisher;
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
+    }
 
     @ManyToMany()
     @JoinTable(name = "author_book",joinColumns =  @JoinColumn(name = "book_id"),
