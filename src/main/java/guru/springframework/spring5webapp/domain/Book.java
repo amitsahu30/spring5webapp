@@ -94,7 +94,7 @@ public class Book {
                 "title='" + title + '\'' +
                 ", isbn='" + isbn + '\'' +
                 ", id=" + id +
-                ", authors=" + authors +
+
                 '}';
     }
 }
